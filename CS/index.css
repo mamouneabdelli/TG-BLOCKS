@@ -1,0 +1,501 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #4285f4;
+  --secondary-color: #f4b400;
+  --dark-bg: #1d1d1d;
+  --light-bg: #ffffff;
+  --dark-text: #1d1d1d;
+  --light-text: #ffffff;
+  --success-color: #0f9d58;
+  --warning-color: #f4b400;
+  --error-color: #db4437;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Theme Styles */
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--light-text);
+}
+
+body:not(.dark-mode) {
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(29, 29, 29, 0.9);
+}
+
+.logo {
+  background-image: url(techGeeks-white-logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--light-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--secondary-color);
+}
+
+.theme-toggle {
+  background-color: var(--secondary-color);
+  color: var(--dark-text);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.theme-toggle:hover {
+  background-color: #e1b70f;
+  transform: scale(1.05);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  min-height: 90vh;
+  padding: 2rem 5%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  width: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.tg-blocks {
+  font-size: 5rem;
+  font-weight: 800;
+  background-color: var(--light-bg);
+  color: var(--dark-bg);
+  padding: 1rem;
+  margin: 2rem 0;
+  display: inline-block;
+  box-shadow: 20px 20px 0 rgba(255, 255, 255, 0.2);
+}
+
+.definition-platform {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.button.primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.button.secondary {
+  background-color: var(--secondary-color);
+  color: var(--dark-text);
+}
+
+.button:hover {
+  transform: translateY(-5px);
+}
+
+.hero-graphics {
+  width: 50%;
+  position: relative;
+}
+
+.square-grid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(square-grid.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.2;
+}
+
+.photo1, .photo2 {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.photo1 {
+  background-image: url(Blockly_ScreenShot.png);
+  width: 80%;
+  height: 40%;
+  top: 10%;
+  right: 5%;
+}
+
+.photo2 {
+  background-image: url(CompiledBlockScreenShot.png);
+  width: 60%;
+  height: 30%;
+  bottom: 10%;
+  right: 10%;
+}
+
+.arrow {
+  background-image: url(white-arrow.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 40%;
+  right: 40%;
+  transform: rotate(-80deg);
+}
+
+/* About Section */
+.about {
+  padding: 5rem 10%;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  position: relative;
+}
+
+.star-icon {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-image: url(yellow-star.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 70px;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.tg-block-def {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin-bottom: 3rem;
+}
+
+.about-features {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.feature {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 1rem;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Blockly Info Section */
+.blockly-info {
+  padding: 5rem 10%;
+  background-color: var(--dark-bg);
+  color: var(--light-text);
+}
+
+.blockly-showcase {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.picture-blocky {
+  background-image: url(web_720.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 400px;
+}
+
+.def-how-work {
+  width: 50%;
+  padding: 2rem;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 15px 15px 0 rgba(255, 255, 255, 0.2);
+}
+
+.def-how-work h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.def-how-work p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Workspace Demo */
+.workspace-demo {
+  padding: 5rem 10%;
+}
+
+.workspace-demo h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#workspace {
+  display: flex;
+  gap: 2rem;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 2rem;
+  min-height: 500px;
+}
+
+.workspace-toolbox {
+  width: 25%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.workspace-area {
+  width: 50%;
+  border: 2px dashed #aaa;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  padding: 1rem;
+}
+
+.workspace-output {
+  width: 25%;
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.code-output {
+  white-space: pre-wrap;
+  font-family: monospace;
+  padding: 1rem;
+  background-color: #222;
+  border-radius: 5px;
+  height: 80%;
+  overflow-y: auto;
+}
+
+.drop-zone {
+  width: 100%;
+  height: 90%;
+  position: relative;
+}
+
+/* Block Styles */
+.blocky {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: grab;
+}
+
+.block-input {
+  margin-left: 10px;
+  border: none;
+  padding: 5px;
+  border-radius: 3px;
+  width: 100px;
+  font-size: 14px;
+}
+
+.blocky-loop { background-color: #ff9800; }
+.blocky-condition { background-color: #2196F3; }
+.blocky-action { background-color: #4CAF50; }
+.blocky-variable { background-color: #9C27B0; }
+
+/* FAQ Section */
+.faq {
+  padding: 5rem 10%;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+}
+
+.faq h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.faq-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+/* Feedback Section */
+.feedback {
+  padding: 5rem 10%;
+  background-color: var(--dark-bg);
+  color: var(--light-text);
+}
+
+.feedback h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.feedback-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  flex: 1;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #1D1D1D;
+  color: #fff;
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Rating Component */
+.rating {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.rating-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
