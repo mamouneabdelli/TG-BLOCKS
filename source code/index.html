@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TG-BLOCKS — Learn Algorithms Visually</title>
+  <link rel="stylesheet" href="index.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet"/>
+</head>
+<body class="dark-mode">
+
+  <nav class="navbar" id="navbar">
+    <div class="logo-text">TG<span>.</span>BLOCKS</div>
+    <div class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#demo">Demo</a>
+      <a href="#faq">FAQ</a>
+      <a href="#feedback">Feedback</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.php" class="btn-nav">Log In</a>
+      <a href="signup.php" class="btn-nav btn-nav--accent">Sign Up</a>
+      <button class="theme-toggle" id="themeToggle">🌞</button>
+    </div>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="grid-lines"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">✦ Visual Algorithm Learning</div>
+      <h1 class="hero-title">Build Algorithms<br/><span class="accent-text">Without the Syntax.</span></h1>
+      <p class="hero-desc">TG-Blocks helps beginners understand algorithmic thinking through drag-and-drop visual blocks — no compiler errors, no syntax headaches.</p>
+      <div class="hero-buttons">
+        <a href="signup.php" class="btn btn--primary">Start Learning Free</a>
+        <a href="#demo" class="btn btn--ghost">Try the Demo ↓</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-n">3+</span><span class="stat-l">Languages</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-n">100%</span><span class="stat-l">Free</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-n">∞</span><span class="stat-l">Projects</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-card">
+        <div class="code-card-top">
+          <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+          <span class="code-card-label">generated_code.py</span>
+        </div>
+        <pre class="code-preview"><span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="num">10</span>):
+    <span class="kw">if</span> i % <span class="num">2</span> == <span class="num">0</span>:
+        <span class="fn">print</span>(i)
+
+x = <span class="num">0</span>
+<span class="fn">greet</span>()</pre>
+      </div>
+      <div class="block-float block-float-1">🔁 Loop <em>10</em> times</div>
+      <div class="block-float block-float-2">❓ If Condition</div>
+      <div class="block-float block-float-3">📦 Variable x</div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="section-label">— About TG-Blocks</div>
+    <h2 class="section-title">Why TG-Blocks?</h2>
+    <p class="section-desc">TG-Blocks bridges the gap between algorithmic thinking and real code. Design logic visually, then see it translated instantly.</p>
+    <div class="features-grid">
+      <div class="feature-card"><div class="feature-num">01</div><div class="feature-icon-wrap">🧩</div><h3>Drag &amp; Drop</h3><p>Build algorithms by snapping visual blocks — no typing required.</p></div>
+      <div class="feature-card"><div class="feature-num">02</div><div class="feature-icon-wrap">💾</div><h3>Progress Saved</h3><p>Your workspace is saved automatically when you're logged in.</p></div>
+      <div class="feature-card"><div class="feature-num">03</div><div class="feature-icon-wrap">⚡</div><h3>Live Code Generation</h3><p>Watch real code appear as you place blocks. Python, JS, Java.</p></div>
+      <div class="feature-card"><div class="feature-num">04</div><div class="feature-icon-wrap">🌐</div><h3>Powered by Blockly</h3><p>Built on Google's Blockly — works on all major browsers.</p></div>
+    </div>
+  </section>
+
+  <section id="demo" class="demo-section">
+    <div class="section-label">— Interactive Demo</div>
+    <h2 class="section-title">Try it out!</h2>
+    <p class="section-desc">Drag blocks from the toolbox onto the canvas and watch your code appear.</p>
+    <div class="workspace" id="workspace">
+      <div class="toolbox">
+        <div class="toolbox-title">TOOLBOX</div>
+        <div class="block-item block-loop" draggable="true" data-type="loop">
+          <span class="bi-icon">🔁</span><span class="bi-label">Loop</span>
+          <input class="bi-input" type="text" placeholder="10" onclick="event.stopPropagation()"/>
+        </div>
+        <div class="block-item block-condition" draggable="true" data-type="condition">
+          <span class="bi-icon">❓</span><span class="bi-label">If</span>
+          <input class="bi-input" type="text" placeholder="x > 0" onclick="event.stopPropagation()"/>
+        </div>
+        <div class="block-item block-action" draggable="true" data-type="action">
+          <span class="bi-icon">▶</span><span class="bi-label">Action</span>
+          <input class="bi-input" type="text" placeholder="greet" onclick="event.stopPropagation()"/>
+        </div>
+        <div class="block-item block-variable" draggable="true" data-type="variable">
+          <span class="bi-icon">📦</span><span class="bi-label">Variable</span>
+          <input class="bi-input" type="text" placeholder="x" onclick="event.stopPropagation()"/>
+        </div>
+        <div class="toolbox-hint">← Drag to canvas</div>
+      </div>
+      <div class="canvas-area" id="canvasArea">
+        <div class="canvas-placeholder" id="canvasPlaceholder">
+          <span class="ph-icon">🧩</span>
+          <p>Drop your first block here</p>
+        </div>
+        <div class="drop-zone" id="dropZone"></div>
+      </div>
+      <div class="output-panel">
+        <div class="output-header">
+          <span class="output-title">OUTPUT</span>
+          <button class="btn-clear" id="clearBtn">✕ Clear</button>
+        </div>
+        <div class="lang-tabs">
+          <button class="lang-tab active" data-lang="js">JS</button>
+          <button class="lang-tab" data-lang="py">Python</button>
+          <button class="lang-tab" data-lang="java">Java</button>
+        </div>
+        <pre class="code-output" id="codeOutput">// Drop blocks to generate code</pre>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <div class="section-label">— Questions</div>
+    <h2 class="section-title">FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What languages are supported? <span class="faq-chevron">›</span></button><div class="faq-a"><p>TG-Blocks generates Python, JavaScript, and Java. More coming soon.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I save my projects? <span class="faq-chevron">›</span></button><div class="faq-a"><p>Yes — create a free account and your workspace saves automatically.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is TG-Blocks free? <span class="faq-chevron">›</span></button><div class="faq-a"><p>Completely free for all students and educators. No credit card required.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do I need to install anything? <span class="faq-chevron">›</span></button><div class="faq-a"><p>No installation required. TG-Blocks runs entirely in your browser.</p></div></div>
+    </div>
+  </section>
+
+  <section id="feedback" class="feedback">
+    <div class="section-label">— Feedback</div>
+    <h2 class="section-title">Share Your Thoughts</h2>
+    <form class="feedback-form" id="feedbackForm" action="submit_feedback.php" method="POST">
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" name="first_name" class="form-control" placeholder="Ahmed" required/></div>
+        <div class="form-group"><label>Last Name</label><input type="text" name="last_name" class="form-control" placeholder="Benali" required/></div>
+      </div>
+      <div class="form-group"><label>Email</label><input type="email" name="email" class="form-control" placeholder="ahmed@example.com" required/></div>
+      <div class="form-group"><label>Your Feedback</label><textarea name="message" class="form-control" rows="4" placeholder="Tell us what you think..." required></textarea></div>
+      <div class="rating-group">
+        <p class="rating-label">How was your experience?</p>
+        <div class="rating-options">
+          <label class="rating-opt" for="r-happy"><input type="radio" name="rating" id="r-happy" value="happy" required/><span class="rating-face">😊</span><span>Happy</span></label>
+          <label class="rating-opt" for="r-neutral"><input type="radio" name="rating" id="r-neutral" value="neutral"/><span class="rating-face">😐</span><span>Neutral</span></label>
+          <label class="rating-opt" for="r-sad"><input type="radio" name="rating" id="r-sad" value="sad"/><span class="rating-face">😞</span><span>Sad</span></label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn--primary btn--full">Submit Feedback →</button>
+      <div class="form-msg" id="formMsg"></div>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><div class="logo-text">TG<span>.</span>BLOCKS</div><p>Visual algorithm learning for everyone.</p></div>
+      <div class="footer-links"><a href="login.php">Login</a><a href="signup.php">Sign Up</a><a href="#faq">FAQ</a><a href="#feedback">Feedback</a></div>
+      <p class="footer-copy">© 2024–2025 TechGeeks Club. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>
