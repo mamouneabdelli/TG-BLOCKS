@@ -1,7 +1,7 @@
 <?php
 define('DB_HOST', 'localhost');
-define('DB_USER', 'root');       // change to your MySQL username
-define('DB_PASS', '');           // change to your MySQL password
+define('DB_USER', 'tg_blocks');       
+define('DB_PASS', '');           
 define('DB_NAME', 'tg_blocks');
 
 $pdo = new PDO(
@@ -12,4 +12,5 @@ $pdo = new PDO(
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         PDO::ATTR_EMULATE_PREPARES   => false,
     ]
+
 );
