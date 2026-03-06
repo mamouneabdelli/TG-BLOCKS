@@ -104,12 +104,6 @@ If you'd like to improve TG-BLOCKS:
 3. Make your changes
 4. Submit a Pull Request
 
----
-
-## 📄 License
-
-This project is open-source.
-You can specify your license here (MIT, GPL, etc.).
 
 ---
 
