@@ -121,9 +121,5 @@ You can specify your license here (MIT, GPL, etc.).
 
 ---
 
-If you want, I can also generate:
 
-* A more **academic version** (for university project)
-* A more **startup/product style version**
-* Or a more **technical README with architecture details** 🚀
 
