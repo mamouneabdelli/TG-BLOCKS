@@ -115,5 +115,8 @@ If you'd like to improve TG-BLOCKS:
 
 ---
 ![Screenshot](https://github.com/mamouneabdelli/TG-BLOCKS/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%20(134).png?raw=true)
+![Screenshot](https://github.com/mamouneabdelli/TG-BLOCKS/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%20(135).png?raw=true)
+![Screenshot](https://github.com/mamouneabdelli/TG-BLOCKS/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%20(136).png?raw=true)
+![Screenshot](https://github.com/mamouneabdelli/TG-BLOCKS/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%20(137).png?raw=true)
 
 
