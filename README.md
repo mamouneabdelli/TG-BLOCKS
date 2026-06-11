@@ -114,6 +114,10 @@ If you'd like to improve TG-BLOCKS:
 > Build strong foundations.
 
 ---
+N.B: The project is still in demo mode this is not the last version of the project also there is ideas still working on like 
+adding some ia tools to the website to help how you can use the website also helping like giving hints to complicate problems 
+and also drawing diagramms to simplify the code in the blocks.
+---
 ![Screenshot](https://github.com/mamouneabdelli/TG-BLOCKS/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%20(134).png?raw=true)
 ![Screenshot](https://github.com/mamouneabdelli/TG-BLOCKS/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%20(135).png?raw=true)
 ![Screenshot](https://github.com/mamouneabdelli/TG-BLOCKS/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%20(136).png?raw=true)
